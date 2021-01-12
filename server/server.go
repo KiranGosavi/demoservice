@@ -6,16 +6,16 @@ import (
 	"net/http"
 )
 
-func Load()error{
+func Load() error {
 	//load server config
-	err :=config.Load()
+	err := config.Load()
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func Start()error{
-	router :=loadRoutes()
-	return http.ListenAndServe(fmt.Sprintf(":%v",config.AppConfig.Port),router)
+func Start() error {
+	router := loadRoutes()
+	return http.ListenAndServe(fmt.Sprintf(":%v", config.AppConfig.Port), router)
 }

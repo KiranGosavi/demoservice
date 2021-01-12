@@ -5,11 +5,11 @@ import (
 	"testing"
 )
 
-func TestLoad(t *testing.T){
-	tests :=[]struct{
-		name string
+func TestLoad(t *testing.T) {
+	tests := []struct {
+		name          string
 		serviceConfig string
-		wantErr  bool
+		wantErr       bool
 	}{
 		{
 			name:          "wrong_port",
@@ -22,14 +22,14 @@ func TestLoad(t *testing.T){
 			wantErr:       true,
 		},
 	}
-	for _,tt:=range tests {
-		err :=os.Setenv("DEMO_SERVER_PROPERTIES",tt.serviceConfig)
+	for _, tt := range tests {
+		err := os.Setenv("DEMO_SERVER_PROPERTIES", tt.serviceConfig)
 		if err != nil {
 			t.Fatalf("unexpected error: %v", err)
 		}
 		t.Run(tt.name, func(t *testing.T) {
-			if err =Load(); (err != nil)!=tt.wantErr {
-				t.Errorf("Load() error: %v, want error: %v", err,tt.wantErr)
+			if err = Load(); (err != nil) != tt.wantErr {
+				t.Errorf("Load() error: %v, want error: %v", err, tt.wantErr)
 			}
 
 		})
