@@ -1,7 +1,7 @@
 package server
 
 import (
-	"demoservice/config"
+	"github.com/KiranGosavi/demoservice/config"
 	"fmt"
 	"net/http"
 )

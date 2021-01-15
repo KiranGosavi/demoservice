@@ -2,7 +2,7 @@ package colly
 
 import (
 	"bytes"
-	"demoservice/entity"
+	"github.com/KiranGosavi/demoservice/entity"
 	"errors"
 	"fmt"
 	"github.com/gocolly/colly"

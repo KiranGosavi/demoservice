@@ -1,8 +1,8 @@
 package webCrawler
 
 import (
-	"demoservice/entity"
-	"demoservice/webCrawler/colly"
+	"github.com/KiranGosavi/demoservice/entity"
+	"github.com/KiranGosavi/demoservice/webCrawler/colly"
 )
 
 type Crawler interface {

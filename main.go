@@ -1,7 +1,7 @@
 package main
 
 import (
-	"demoservice/server"
+	"github.com/KiranGosavi/demoservice/server"
 	"fmt"
 )
 
