@@ -15,10 +15,15 @@ type appConfig struct {
 var AppConfig appConfig
 
 func Load() error {
-	appconfig := os.Getenv("DEMO_SERVER_PROPERTIES")
-	err := json.Unmarshal([]byte(appconfig), &AppConfig)
-	if err != nil {
-		return err
+	appConfig, present := os.LookupEnv("DEMO_SERVER_PROPERTIES")
+	if present {
+		err := json.Unmarshal([]byte(appConfig), &AppConfig)
+		if err != nil {
+			return err
+		}
+	} else {
+		AppConfig.Port = 8080
+		AppConfig.LogLevel = "DEBUG"
 	}
 	return nil
 }
