@@ -17,5 +17,6 @@ func Load() error {
 
 func Start() error {
 	router := loadRoutes()
+	//start web server on a given port
 	return http.ListenAndServe(fmt.Sprintf(":%v", config.AppConfig.Port), router)
 }

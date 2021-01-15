@@ -93,6 +93,7 @@ func (i *Impl) GetWebSiteInfo(website *entity.Website) (*entity.WebsiteDetails, 
 	return &retInfo, nil
 }
 
+//A function to get version of a html page.
 func getVersion(data string) string {
 	if data == "html" {
 		return "Html 5"
