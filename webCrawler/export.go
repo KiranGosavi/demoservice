@@ -12,4 +12,3 @@ type Crawler interface {
 var Get = func() Crawler {
 	return &colly.Impl{}
 }
-

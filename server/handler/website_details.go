@@ -1,9 +1,9 @@
 package handler
 
 import (
+	"encoding/json"
 	"github.com/KiranGosavi/demoservice/entity"
 	"github.com/KiranGosavi/demoservice/webCrawler"
-	"encoding/json"
 	"net/http"
 )
 

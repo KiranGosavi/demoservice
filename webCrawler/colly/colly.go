@@ -2,9 +2,9 @@ package colly
 
 import (
 	"bytes"
-	"github.com/KiranGosavi/demoservice/entity"
 	"errors"
 	"fmt"
+	"github.com/KiranGosavi/demoservice/entity"
 	"github.com/gocolly/colly"
 	"golang.org/x/net/html"
 	"io"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/KiranGosavi/demoservice/server"
 	"fmt"
+	"github.com/KiranGosavi/demoservice/server"
 )
 
 func main() {
